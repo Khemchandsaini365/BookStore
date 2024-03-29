@@ -5,6 +5,7 @@ const getBooksByName = require('../controlers/BookControlers/getBooks');
 const getBooksByGenre = require('../controlers/BookControlers/getBookByGenre');
 const getBooksByPrice = require('../controlers/BookControlers/getBookgtPrice');
 const getBooksByPrices = require('../controlers/BookControlers/getBooksbetween');
+const updateBook = require('../controlers/BookControlers/Updatenbooks');
 const router = express.Router();
 
 router.post("/addbooks", addBooks);
@@ -13,5 +14,6 @@ router.get("/getBooks/:name", getBooksByName)
 router.get("/getBookbyGener/:genre", getBooksByGenre)
 router.get("/getBookbyprice", getBooksByPrice)
 router.get("/getBookbypricesbetween10-60", getBooksByPrices)
+router.put("/updateBooks/:id", updateBook)
 
 module.exports = router;
